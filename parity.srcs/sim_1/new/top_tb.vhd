@@ -57,23 +57,11 @@ begin
    stim_proc: process
    begin		
       	sw_i <= "00000000";
-			wait for 100ns;
-			sw_i(0) <= '1';
-			wait for 100ns;
-			sw_i(1) <= '1';
-			wait for 100ns;
-			sw_i(2) <= '1';
-            wait for 100ns;
-			sw_i(3) <= '1';
-            wait for 100ns;
-			sw_i(4) <= '1';
-            wait for 100ns;
-			sw_i(5) <= '1';
-            wait for 100ns;
-			sw_i(6) <= '1';
-            wait for 100ns;
-			sw_i(7) <= '1';
-      wait;
+      	for i in 0 to 7 loop
+      		wait for 100ns;
+      	    sw_i(i) <= '1';
+      	end loop;
+		wait;
    end process;
 
 end Behavioral;
