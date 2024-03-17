@@ -56,10 +56,10 @@ begin
 
    stim_proc: process
    begin		
-      	sw_i <= "00000000";
+      	sw_i <= "11111111";
       	for i in 0 to 7 loop
       		wait for 100ns;
-      	    sw_i(i) <= '1';
+      	    sw_i(i) <= '0';
       	end loop;
 		wait;
    end process;
